@@ -101,10 +101,13 @@ body {
   margin: 0 0 8px;
 }
 
+.top-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .theme-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  align-self: flex-end;
 }
 
 .subtitle {
