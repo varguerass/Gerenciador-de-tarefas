@@ -92,8 +92,4 @@ Projeto de lista de tarefas para portfólio, com funcionalidades básicas e avan
 
 Abra o arquivo `index.html` no navegador.
 
-## Próximos passos
 
-- Adicionar categorias
-- Editar prioridade e prazo no modo edição
-- Sincronizar com backend
