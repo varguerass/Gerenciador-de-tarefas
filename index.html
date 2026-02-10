@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <h1>Gerenciador de Tarefas</h1>
+      <p class="subtitle">Organize prioridades, acompanhe o progresso e mantenha o foco.</p>
+      <button id="toggle-theme" class="primary theme-toggle" type="button">Modo noturno</button>
+    </header>
+
+    <main class="panel">
+      <section class="composer" aria-label="Adicionar tarefa">
+        <div class="field">
+          <label for="task-input">Nova tarefa</label>
+          <input id="task-input" type="text" placeholder="Ex.: Estudar JavaScript" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="task-priority">Prioridade</label>
+          <select id="task-priority">
+            <option value="baixa">Baixa</option>
+            <option value="media" selected>Média</option>
+            <option value="alta">Alta</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="task-date">Prazo</label>
+          <input id="task-date" type="date" />
+        </div>
+        <button id="add-task" class="primary">Adicionar</button>
+      </section>
+
+      <section class="toolbar" aria-label="Filtros de tarefas">
+        <div class="filters" role="tablist">
+          <button class="filter active" data-filter="all" role="tab">Todas</button>
+          <button class="filter" data-filter="pending" role="tab">Pendentes</button>
+          <button class="filter" data-filter="completed" role="tab">Concluídas</button>
+        </div>
+        <div class="toolbar-actions">
+          <button id="clear-completed" class="ghost">Remover concluídas</button>
+        </div>
+      </section>
+
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+      <section class="summary" aria-label="Resumo">
+        <p id="summary-text">0 tarefas</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Gerenciador de Tarefas</p>
+    </footer>
+  </div>
+
+  <script src="Main.js"></script>
+</body>
+</html>
